@@ -1,0 +1,43 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <set>
+#include <map>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int q; cin>>q;
+    int queries;
+    string x;
+    int y;
+    map<string,int> mp;
+    map<string, int>::iterator itr = mp.begin();
+
+    while (q--){
+        cin>>queries;
+        if (queries==1){
+            cin>>x;
+            cin>>y;
+            mp[x]+=y;
+        }else if (queries == 2){
+            cin>>x;
+            mp.erase(x);
+            
+        }else if (queries == 3){
+            cin>>x;
+            if (mp.find(x)!= mp.end()){
+                cout<<mp[x]<<endl;
+            }else {
+                cout<<'0'<<endl;
+            }
+        }
+    }
+    return 0;
+}
+
+
+
