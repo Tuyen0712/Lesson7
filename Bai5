@@ -1,0 +1,34 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <set>
+#include <algorithm>
+using namespace std;
+
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+    int x; 
+    int t;
+    int q; cin>>q;
+    set<int>se;
+    for (int i =0;i<q;i++){
+        cin>>t;
+        if (t==1){
+            cin>>x;
+            se.insert(x);
+        }else if (t==2){
+          cin>>x;
+          se.erase(x);  
+        }else {
+         cin>>x;
+         set<int>::iterator itr=se.find(x);
+          if ()
+        }
+    }
+    return 0;
+}
+
+
+
